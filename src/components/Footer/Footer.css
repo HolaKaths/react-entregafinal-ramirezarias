@@ -1,0 +1,13 @@
+footer {
+    background-color: #48cae4;
+    color: black;
+    text-align: center;
+    font-family: montserrat;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

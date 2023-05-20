@@ -1,0 +1,26 @@
+.itemDetailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    padding: 2rem;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .itemDetailContainer h2,
+  .itemDetailContainer h3,
+  .itemDetailContainer p {
+    margin-bottom: 1rem;
+  }
+  
+  .itemDetailContainer img {
+    max-width: 100%;
+    max-height: 300px; 
+    margin-top: 2rem;
+  }
+  
