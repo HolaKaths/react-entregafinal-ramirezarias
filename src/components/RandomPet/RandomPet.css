@@ -1,0 +1,40 @@
+.containerpet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+  text-align: center;
+}
+
+.image-container {
+  margin-top: 30px;
+  max-width: 300px; /* Ajusta el ancho máximo deseado para la imagen */
+}
+
+.alert {
+  margin-bottom: 10px;
+}
+
+.randomImageContainer,
+.listImageContainer {
+    width: 100%;
+    min-height: 200px;
+}
+
+.randomImageContainer {
+    background-color: #fff;
+}
+
+.listImageContainer {
+    margin-top: 30px;
+}
+
+.doggoDropDown {
+    padding: 2px;
+}
+
+.dogInfo {
+    text-align: left;
+    margin-top: 35px;
+}

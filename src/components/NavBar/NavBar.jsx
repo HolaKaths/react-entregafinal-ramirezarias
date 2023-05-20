@@ -21,7 +21,7 @@ const NavBar = () => {
                     </li>
                     <li>
 
-                        <NavLink> Random Pet </NavLink>
+                        <NavLink to={"/RandomPet"} > Random Pet </NavLink>
                     </li>
                     <li>
 

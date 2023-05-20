@@ -8,6 +8,7 @@ import Categorias from './components/Categorias/Categorias';
 import UseRef from './components/UseRef/UseRef';
 import Banner from './components/Banner/Banner';
 import QuienesSomos from './components/QuienesSomos/QuienesSomos';
+import RandomPet from './components/RandomPet/RandomPet';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/categoria/:idCategoria' element={<ItemListContainer />} />
         <Route path='/item/:idItem' element={<ItemDetailContainer />} />
         <Route path='/QuienesSomos' element={<QuienesSomos/>} />
+        <Route path='/RandomPet' element={<RandomPet/>} />
       </Routes>
 
       <ItemListContainer greeting="¡Bienvenido a tu Tienda Pet!" />
