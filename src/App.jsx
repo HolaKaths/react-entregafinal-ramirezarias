@@ -7,7 +7,9 @@ import Footer from './components/Footer/Footer';
 import Categorias from './components/Categorias/Categorias';
 import UseRef from './components/UseRef/UseRef';
 import Banner from './components/Banner/Banner';
+import QuienesSomos from './components/QuienesSomos/QuienesSomos';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -19,7 +21,7 @@ function App() {
         <Route path='/' element={<Categorias />} />
         <Route path='/categoria/:idCategoria' element={<ItemListContainer />} />
         <Route path='/item/:idItem' element={<ItemDetailContainer />} />
-
+        <Route path='/QuienesSomos' element={<QuienesSomos/>} />
       </Routes>
 
       <ItemListContainer greeting="¡Bienvenido a tu Tienda Pet!" />

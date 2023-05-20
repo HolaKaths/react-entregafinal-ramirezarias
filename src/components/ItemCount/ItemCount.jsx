@@ -1,7 +1,8 @@
+import './ItemCount.css';
 import { useState } from "react";
 
 
-const ItemCount = () => {
+const ItemCount = ({inical, stock, funcionAgregar}) => {
     const [contador, setContador] = useState(1);
 
     let maximo = 10;

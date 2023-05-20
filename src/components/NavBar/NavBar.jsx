@@ -13,7 +13,7 @@ const NavBar = () => {
             <nav>
                 <ul>
                     <li>
-                        <NavLink to={"/"}> ¿Qué es Proyecto Pet? </NavLink>
+                        <NavLink to={"/QuienesSomos"} > ¿Qué es Proyecto Pet? </NavLink>
                     </li>
                     <li>
 
