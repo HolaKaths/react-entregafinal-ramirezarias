@@ -7,7 +7,7 @@ const NavBar = () => {
     return (
         <header>
             <Link to={'/'}>
-            <img src={mascota} alt="Logo Pet" /> </Link>
+                <img src={mascota} alt="Logo Pet" /> </Link>
 
             <Link to={'/'}> <h1> Proyecto Pet</h1> </Link>
             <nav>
@@ -25,7 +25,7 @@ const NavBar = () => {
                     </li>
                     <li>
 
-                        <NavLink> Tienda Pet </NavLink>
+                        <Link to={'/'}>  Tienda Pet </Link>
                     </li>
                 </ul>
             </nav>

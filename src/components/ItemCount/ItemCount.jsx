@@ -2,28 +2,33 @@ import './ItemCount.css';
 import { useState } from "react";
 
 
-const ItemCount = ({inical, stock, funcionAgregar}) => {
-    const [contador, setContador] = useState(1);
 
-    let maximo = 10;
+const ItemCount = ({inicial, stock, funcionAgregar}) => {
+    const [contador, setContador] = useState(inicial);
+
+   
     const aumentar = () => {
-        if (contador < maximo) {
+        if (contador < stock) {
             setContador(contador + 1);
         }
     }
 
     const reducir = () => {
-        if (contador > 1) {
+        if (contador > inicial) {
             setContador(contador - 1);
         }
     }
 
     return (
+        <>
         <div>
             <button onClick={reducir}> - </button>
             <p> {contador} </p>
             <button onClick={aumentar}> + </button>
         </div>
+
+        <button onClick ={() =>funcionAgregar}> Agregar al carrito </button>
+        </>
     )
 }
 

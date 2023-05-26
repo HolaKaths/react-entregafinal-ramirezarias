@@ -10,6 +10,7 @@ import Banner from './components/Banner/Banner';
 import QuienesSomos from './components/QuienesSomos/QuienesSomos';
 import RandomPet from './components/RandomPet/RandomPet';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { RiH2 } from 'react-icons/ri';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/item/:idItem' element={<ItemDetailContainer />} />
         <Route path='/QuienesSomos' element={<QuienesSomos/>} />
         <Route path='/RandomPet' element={<RandomPet/>} />
+        <Route path='*' element= {<h2>Sitio en construcción</h2>}/>
       </Routes>
 
       <ItemListContainer greeting="¡Bienvenido a tu Tienda Pet!" />
