@@ -14,6 +14,7 @@ import Cart from './components/Cart/Cart';
 import Productos from './components/Productos/Productos';
 import { CarritoProvider } from './Context/CarritoContext';
 import Checkout from './components/Checkout/Checkout';
+import Formulario from './components/Formulario/Formulario';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
       <NavBar />
       <br />
       <Banner />
-      <Productos />
+   
       <CarritoProvider>
         <Routes>
           <Route path='/' element={<Categorias />} />
@@ -36,7 +37,8 @@ function App() {
 
         </Routes>
       </CarritoProvider>
-      
+      <Productos />
+      <Formulario />
 
       <br />
 

@@ -32,17 +32,18 @@ function RandomPet() {
     <div className="containerpet random-pet-container">
       <div className="random-pet-wrapper">
         <h1>Hoy queremos regalarte una foto pet</h1>
-        <p className="dogInfo"></p>
+        <div className="dogInfo"></div>
         <h2>¿Cuál será el tuyo?</h2>
         {error && <div className="alert">{error}</div>}
         <div className="randomImageContainer image-container">
           {imageUrl && <img src={imageUrl} alt="Random Pet" className="random-image" />}
         </div>
-        <p className="dogInfo h5">Este será tu foto pet de la suerte...</p>
+        <div className="dogInfo h5">Este será tu foto pet de la suerte...</div>
         <button id="btn" onClick={obtenerRazaAleatoria}>¡Quiero mi Pet!</button>
       </div>
     </div>
   );
 }
+
 
 export default RandomPet;

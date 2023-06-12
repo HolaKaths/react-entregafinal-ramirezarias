@@ -10,7 +10,7 @@ const Productos = () => {
 
     useEffect(() => {
         
-        const misProductos = query(collection(db, "Inventario"), where("precio", "<", 500));
+        const misProductos = query(collection(db, "Inventario"), where("precio", "<", 800));
 
 
         getDocs(misProductos)
