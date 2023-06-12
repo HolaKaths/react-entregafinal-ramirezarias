@@ -1,7 +1,8 @@
 import './Productos.css';
 import { useState, useEffect } from 'react';
-import { getDocs, collection, query, where, doc, updateDoc } from "firebase/firestore";
+import { getDocs, collection, query, where, doc, updateDoc, getFirestore } from "firebase/firestore";
 import { db } from "../../Services/config";
+import { initializeApp } from 'firebase/app';
 
 
 const Productos = () => {
@@ -9,7 +10,7 @@ const Productos = () => {
 
     useEffect(() => {
         
-        const misProductos = query(collection(db, "inventario"), where("precio", "<", 500));
+        const misProductos = query(collection(db, "Inventario"), where("precio", "<", 500));
 
 
         getDocs(misProductos)
@@ -20,7 +21,7 @@ const Productos = () => {
     }, [productos])
 
     const descontarStock = async (producto) => {
-        const productoRef = doc(db, "inventario", producto.id);
+        const productoRef = doc(db, "Inventario", producto.id);
         const nuevoStock = producto.stock -1;
 
         await updateDoc(productoRef, {stock: nuevoStock});
@@ -29,7 +30,7 @@ const Productos = () => {
 
     return (
         <>
-            <h2> Productos </h2>
+            <h2 className='titulo'> Productos </h2>
             <div className='productos-container'>
                 {
                     productos.map((producto) => (
@@ -46,4 +47,5 @@ const Productos = () => {
     )
 }
 
-export default Productos
+export default Productos;
+

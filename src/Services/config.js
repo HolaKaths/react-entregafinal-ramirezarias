@@ -1,10 +1,10 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCFsq9NfyXEUEv4i-gDPvgrJIOOdZQsc6I",
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     authDomain: "proyecto--pet.firebaseapp.com",
     projectId: "proyecto--pet",
     storageBucket: "proyecto--pet.appspot.com",
