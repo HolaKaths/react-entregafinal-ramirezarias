@@ -27,20 +27,23 @@ const Formulario = () => {
   }
 
   return (
-    <form onSubmit={manejadorFormulario}>
+    <div className="form-container">
+      <form onSubmit={manejadorFormulario} className="form-style">
 
-      <h2>Formulario de contacto</h2>
-      <label htmlFor=""> Nombre </label>
-      <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+        <h2>Formulario de contacto</h2>
+        <label htmlFor=""> Nombre </label>
+        <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
 
-      <label htmlFor=""> Apellido </label>
-      <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
+        <label htmlFor=""> Apellido </label>
+        <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
 
-      <label htmlFor=""> Celular </label>
-      <input type="text" value={celular} onChange={(e) => setTelefono(e.target.value)} />
+        <label htmlFor=""> Celular </label>
+        <input type="text" value={celular} onChange={(e) => setTelefono(e.target.value)} />
 
-      <button type="submit">Enviar</button>
-    </form>
+        <button type="submit">Enviar</button>
+
+      </form>
+    </div>
   )
 }
 

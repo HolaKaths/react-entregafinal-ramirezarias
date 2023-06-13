@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { CarritoContext } from "../../Context/CarritoContext";
 import { db } from '../../Services/config';
 import { collection, addDoc } from 'firebase/firestore';
+import './Checkout.css';
 
 
 const Checkout = () => {
@@ -57,7 +58,7 @@ const Checkout = () => {
 
 
     return (
-        <div>
+        <div className="checkout-container">
             <h2> Checkout </h2>
             <form onSubmit={manejadorSubmit}>
                 {carrito.map(producto => (
@@ -68,23 +69,23 @@ const Checkout = () => {
                     </div>
                 ))}
                 <hr />
-                <div>
+                <div className="form-style">
                     <label htmlFor=""> Nombre </label>
                     <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
                 </div>
-                <div>
+                <div className="form-style">
                     <label htmlFor=""> Apellido </label>
                     <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
                 </div>
-                <div>
+                <div className="form-style">
                     <label htmlFor=""> Celular</label>
                     <input type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                 </div>
-                <div>
+                <div className="form-style">
                     <label htmlFor="">E-mail</label>
                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
-                <div>
+                <div className="form-style">
                     <label htmlFor=""> E-mail confirmación</label>
                     <input type="email" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
                 </div>
