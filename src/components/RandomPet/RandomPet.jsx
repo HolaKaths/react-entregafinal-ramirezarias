@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './RandomPet.css';
 import Categorias from '../Categorias/Categorias';
 
+
+
 function RandomPet() {
   const [imageUrl, setImageUrl] = useState('');
   const [error, setError] = useState('');
@@ -41,9 +43,15 @@ function RandomPet() {
         <div className="dogInfo h5">Este será tu foto pet de la suerte...</div>
         <button id="btn" onClick={obtenerRazaAleatoria}>¡Quiero mi Pet!</button>
       </div>
+
+      <div className="categorias-container">
+        <Categorias />
+      </div>
     </div>
   );
 }
+
+
 
 
 export default RandomPet;

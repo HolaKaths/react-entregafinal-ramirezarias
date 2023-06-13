@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import NavBar from './components/NavBar/NavBar';
@@ -9,7 +8,6 @@ import Banner from './components/Banner/Banner';
 import QuienesSomos from './components/QuienesSomos/QuienesSomos';
 import RandomPet from './components/RandomPet/RandomPet';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { RiH2 } from 'react-icons/ri';
 import Cart from './components/Cart/Cart';
 import Productos from './components/Productos/Productos';
 import { CarritoProvider } from './Context/CarritoContext';
