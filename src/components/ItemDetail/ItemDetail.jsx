@@ -5,6 +5,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CarritoContext } from '../../Context/CarritoContext';
 import { useContext } from 'react';
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../../Services/config";
+
 
 
 
@@ -42,7 +45,7 @@ const descriptions = {
 
 
 
-const ItemDetail = ({ id, nombre, precio, img, stock, descontarStock, producto }) => {
+const ItemDetail = ({ id, nombre, precio, img, stock, producto }) => {
   const description = descriptions[id];
   const [agregarCantidad, setAgregarCantidad] = useState(0);
 
@@ -54,6 +57,14 @@ const ItemDetail = ({ id, nombre, precio, img, stock, descontarStock, producto }
     const item = { id, nombre, precio };
     agregarProducto(item, cantidad);
   }
+
+  const descontarStock = async (producto) => {
+    const productoRef = doc(db, "Inventario", producto.id);
+    const nuevoStock = producto.stock - 1;
+
+    await updateDoc(productoRef, { stock: nuevoStock });
+
+}
 
   return (
     <div className="itemDetailContainer">

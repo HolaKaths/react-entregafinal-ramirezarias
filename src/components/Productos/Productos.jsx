@@ -22,33 +22,26 @@ const Productos = () => {
 
     }, [productos])
 
-    const descontarStock = async (producto) => {
-        const productoRef = doc(db, "Inventario", producto.id);
-        const nuevoStock = producto.stock - 1;
 
-        await updateDoc(productoRef, { stock: nuevoStock });
-
-    }
 
     return (
         <>
             <h2 className='titulo'> Productos </h2>
             <div className='productos-container'>
                 {
-                   productos.map((producto) => (
-                    <div className='producto-card' key={producto.id}>
-                      <ItemDetail
-                        id={producto.id}
-                        nombre={producto.nombre}
-                        precio={producto.precio}
-                        stock={producto.stock}
-                        img={producto.img}
-                        descontarStock={descontarStock}
-                        producto={producto}
-                      />
-                    </div>
-                  ))
-                  
+                    productos.map((producto) => (
+                        <div className='producto-card' key={producto.id}>
+                            <ItemDetail
+                                id={producto.id}
+                                nombre={producto.nombre}
+                                precio={producto.precio}
+                                stock={producto.stock}
+                                img={producto.img}
+                                producto={producto}
+                            />
+                        </div>
+                    ))
+
                 }
             </div>
         </>
