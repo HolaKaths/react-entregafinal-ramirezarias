@@ -4,6 +4,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { useState } from 'react';
 import './Formulario.css';
 
+
 const Formulario = () => {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");

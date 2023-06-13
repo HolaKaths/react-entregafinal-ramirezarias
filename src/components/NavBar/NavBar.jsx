@@ -15,7 +15,7 @@ const NavBar = () => {
                     <li>
                         <NavLink to={"/QuienesSomos"} > ¿Qué es Proyecto Pet? </NavLink>
                     </li>
-                  
+
                     <li>
 
                         <NavLink to={"/RandomPet"} > Random Pet </NavLink>
@@ -23,6 +23,10 @@ const NavBar = () => {
                     <li>
 
                         <Link to={'/'}>  Tienda Pet </Link>
+                    </li>
+
+                    <li>
+                        <NavLink to={"/Formulario"} > Contacto </NavLink>
                     </li>
                 </ul>
             </nav>

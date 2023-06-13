@@ -26,3 +26,6 @@ Este proyecto es una aplicación web desarrollada con React.js que muestra infor
 4. En "Random Pet" encontrarás una API que te trae una foto aleatoria de una mascota ❤️.
 5. En "Tienda Pet" verás las categorías de productos. Haz clic en una para ver los productos disponibles. Luego, en la página de "Ver detalles del producto", podrás ver el stock disponible y agregar el producto al carrito de compras.
 
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más información.
