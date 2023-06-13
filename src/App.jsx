@@ -12,6 +12,7 @@ import Cart from './components/Cart/Cart';
 import Productos from './components/Productos/Productos';
 import { CarritoProvider } from './Context/CarritoContext';
 import Checkout from './components/Checkout/Checkout';
+import Formulario from './components/Formulario/Formulario';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/RandomPet' element={<RandomPet />} />
           <Route path='/Cart' element={<Cart />} />
           <Route path='/Checkout' element={<Checkout />} />
+          <Route path='/Formulario' element={<Formulario />} />
         </Routes>
       </CarritoProvider>
       <Productos />
