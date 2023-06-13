@@ -21,7 +21,7 @@ label {
 .checkout-form {
     
     width: 100%;
-    padding: 20rem;
+    padding: 10rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-top: 2rem;
@@ -40,7 +40,7 @@ label {
 
 .checkout-form input,
 .checkout-form textarea {
-    padding: 2rem;
+    padding: 1rem;
     font-size: 3rem;
     border: 1px solid #ccc;
     border-radius: 5px;
