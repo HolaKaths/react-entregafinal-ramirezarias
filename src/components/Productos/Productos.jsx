@@ -2,6 +2,8 @@ import './Productos.css';
 import { useState, useEffect } from 'react';
 import { getDocs, collection, query, where, doc, updateDoc } from "firebase/firestore";
 import { db } from "../../Services/config";
+import ItemDetail from '../ItemDetail/ItemDetail';
+
 
 
 
@@ -33,16 +35,20 @@ const Productos = () => {
             <h2 className='titulo'> Productos </h2>
             <div className='productos-container'>
                 {
-                    productos.map((producto) => (
-                        <div className='producto-card' key={producto.id}>
-                            <h2>{producto.nombre}</h2>
-                            <p>Precio: $ {producto.precio} </p>
-                            <p>Stock:  {producto.stock} </p>
-                            img={producto.img}
-                            
-                            <button onClick={() => descontarStock(producto)}> Comprar </button>
-                        </div>
-                    ))
+                   productos.map((producto) => (
+                    <div className='producto-card' key={producto.id}>
+                      <ItemDetail
+                        id={producto.id}
+                        nombre={producto.nombre}
+                        precio={producto.precio}
+                        stock={producto.stock}
+                        img={producto.img}
+                        descontarStock={descontarStock}
+                        producto={producto}
+                      />
+                    </div>
+                  ))
+                  
                 }
             </div>
         </>

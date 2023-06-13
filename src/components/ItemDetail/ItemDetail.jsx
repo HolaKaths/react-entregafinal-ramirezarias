@@ -42,16 +42,14 @@ const descriptions = {
 
 
 
-const ItemDetail = ({ id, nombre, precio, img, stock }) => {
+const ItemDetail = ({ id, nombre, precio, img, stock, descontarStock, producto }) => {
   const description = descriptions[id];
   const [agregarCantidad, setAgregarCantidad] = useState(0);
 
   const { agregarProducto } = useContext(CarritoContext);
 
-
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
-    //console.log("Productos agregados:" + cantidad);
 
     const item = { id, nombre, precio };
     agregarProducto(item, cantidad);
@@ -62,15 +60,20 @@ const ItemDetail = ({ id, nombre, precio, img, stock }) => {
       <h2>{nombre}</h2>
       <h3>Precio: {precio}</h3>
       <h3>ID: {id}</h3>
-      <h3> Stock: {stock}</h3>
+      <h3>Stock: {stock}</h3>
       <p>{description}</p>
       <img src={img} alt={nombre} />
-      {
-        agregarCantidad > 0 ? (<Link to="/Cart">Terminar compra </Link>)
-          : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
-      }
+
+      <button onClick={() => descontarStock(producto)}>Comprar</button>
+
+      {agregarCantidad > 0 ? (
+        <Link to="/Cart">Terminar compra</Link>
+      ) : (
+        <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
+      )}
     </div>
-  )
-}
+  );
+};
+
 
 export default ItemDetail;
