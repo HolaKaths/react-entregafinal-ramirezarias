@@ -15,10 +15,7 @@ const NavBar = () => {
                     <li>
                         <NavLink to={"/QuienesSomos"} > ¿Qué es Proyecto Pet? </NavLink>
                     </li>
-                    <li>
-
-                        <NavLink> Calculadora </NavLink>
-                    </li>
+                  
                     <li>
 
                         <NavLink to={"/RandomPet"} > Random Pet </NavLink>
