@@ -59,7 +59,7 @@ const Checkout = () => {
     return (
         <div>
             <h2> Checkout </h2>
-            <form aonSubmit={manejadorSubmit}>
+            <form onSubmit={manejadorSubmit}>
                 {carrito.map(producto => (
                     <div key={producto.item.id}>
                         <p> {producto.item.nombre} x {producto.cantidad}</p>
@@ -93,7 +93,7 @@ const Checkout = () => {
                     error && <p style={{ color: "red" }}> {error} </p>
                 }
 
-                <button>Finalizar orden</button>
+                <button type="submit">Finalizar orden</button>
 
                 {
                     ordenId && (<strong>¡Gracias por tu compra!
