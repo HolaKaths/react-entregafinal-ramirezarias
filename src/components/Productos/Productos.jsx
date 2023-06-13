@@ -37,7 +37,7 @@ const Productos = () => {
                         <div className='producto-card' key={producto.id}>
                             <h2>{producto.nombre}</h2>
                             <p>Precio: $ {producto.precio} </p>
-                            <p>Stock: $ {producto.stock} </p>
+                            <p>Stock:  {producto.stock} </p>
                             <button onClick={() => descontarStock(producto)}> Comprar </button>
                         </div>
                     ))

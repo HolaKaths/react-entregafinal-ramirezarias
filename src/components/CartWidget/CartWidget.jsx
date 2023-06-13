@@ -8,7 +8,7 @@ import { CarritoContext } from '../../Context/CarritoContext';
 
 const CartWidget = () => {
   const { carrito } = useContext(CarritoContext);
-  const totalCantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+  const cantidadTotal= carrito.reduce((total, producto) => total + producto.cantidad, 0);
 
 
   return (
@@ -17,7 +17,7 @@ const CartWidget = () => {
 
       {
 
-        totalCantidad > 0 && <span> {totalCantidad} </span>
+        cantidadTotal> 0 && <span> {cantidadTotal} </span>
       }
 
     </Link>

@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
   const { idItem } = useParams();
 
   useEffect(() => {
-    const nuevoDoc = doc(db, "inventario", idItem);
+    const nuevoDoc = doc(db, "Inventario", idItem);
 
     getDoc(nuevoDoc)
       .then(res => {
