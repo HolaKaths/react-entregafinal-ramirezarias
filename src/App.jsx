@@ -24,7 +24,6 @@ function App() {
       <NavBar />
       <br />
       <Banner />
-   
       <CarritoProvider>
         <Routes>
           <Route path='/' element={<Categorias />} />
@@ -34,7 +33,6 @@ function App() {
           <Route path='/RandomPet' element={<RandomPet />} />
           <Route path='/Cart' element={<Cart />} />
           <Route path='/Checkout' element={<Checkout />} />
-
         </Routes>
       </CarritoProvider>
       <Productos />

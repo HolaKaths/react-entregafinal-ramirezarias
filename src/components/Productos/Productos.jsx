@@ -1,8 +1,8 @@
 import './Productos.css';
 import { useState, useEffect } from 'react';
-import { getDocs, collection, query, where, doc, updateDoc, getFirestore } from "firebase/firestore";
+import { getDocs, collection, query, where, doc, updateDoc} from "firebase/firestore";
 import { db } from "../../Services/config";
-import { initializeApp } from 'firebase/app';
+
 
 
 const Productos = () => {

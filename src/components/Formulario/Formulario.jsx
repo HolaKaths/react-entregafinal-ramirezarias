@@ -14,7 +14,7 @@ const Formulario = () => {
     event.preventDefault();
 
 
-    addDoc(collection(db, "usuarios"), {
+    addDoc(collection(db, "Usuarios"), {
       nombre: nombre,
       apellido: apellido,
       telefono: celular,
