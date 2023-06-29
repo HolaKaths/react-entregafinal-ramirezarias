@@ -17,13 +17,15 @@ import Formulario from './components/Formulario/Formulario';
 function App() {
   return (
     <BrowserRouter>
-
       <NavBar />
       <br />
       <Banner />
       <CarritoProvider>
         <Routes>
-          <Route path='/' element={<Categorias />} />
+          <Route path='/' element={<>
+            <Categorias />
+            <Productos />
+          </>} />
           <Route path='/categoria/:idCategoria' element={<ItemListContainer />} />
           <Route path='/item/:idItem' element={<ItemDetailContainer />} />
           <Route path='/QuienesSomos' element={<QuienesSomos />} />
@@ -32,15 +34,12 @@ function App() {
           <Route path='/Formulario' element={<Formulario />} />
         </Routes>
       </CarritoProvider>
-      
-      
-
       <br />
-
       <Footer />
     </BrowserRouter>
   );
 }
+
 
 export default App;
 
