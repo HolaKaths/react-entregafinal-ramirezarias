@@ -18,10 +18,6 @@ const NavBar = () => {
 
                     <li>
 
-                        <NavLink to={"/RandomPet"} > Random Pet </NavLink>
-                    </li>
-                    <li>
-
                         <Link to={'/'}>  Tienda Pet </Link>
                     </li>
 

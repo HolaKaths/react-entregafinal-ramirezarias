@@ -13,7 +13,7 @@ const Item = ({ id, nombre, precio, img }) => {
 
 
             }
-            <Link to={`/item/${id}`} target="_blank" className="btnProducto">Ver detalles</Link>
+            <Link to={`/item/${id}`} className="btnProducto">Ver detalles</Link>
 
 
         </div>
